@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Depozyt</title>
+
+<style>
+body{
+font-family:Poppins,sans-serif;
+background:white;
+padding:20px;
+}
+
+.container{
+max-width:400px;
+margin:auto;
+border:2px solid gold;
+border-radius:20px;
+padding:25px;
+text-align:center;
+}
+
+h1{
+color:gold;
+margin-bottom:25px;
+}
+
+button{
+width:100%;
+padding:14px;
+margin-top:15px;
+background:gold;
+color:white;
+border:none;
+border-radius:12px;
+font-size:16px;
+}
+
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+justify-content:center;
+align-items:center;
+}
+
+.popup-content{
+background:white;
+padding:25px;
+border-radius:20px;
+border:2px solid gold;
+text-align:center;
+width:90%;
+max-width:300px;
+}
+
+.popup-content p{
+color:gold;
+font-weight:bold;
+margin-bottom:15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Depozyt</h1>
+
+<button onclick="showPopup()">Przelew bankowy</button>
+
+<button onclick="showPopup()">Płatności kryptowalutowe</button>
+
+<button onclick="location.href='homepage.html'">Powrót</button>
+
+</div>
+
+<div class="popup" id="popup">
+<div class="popup-content">
+<p>Napisz do administratora po informacje o depozycie</p>
+<button onclick="closePopup()">OK</button>
+</div>
+</div>
+
+<script>
+function showPopup(){
+document.getElementById('popup').style.display='flex';
+}
+
+function closePopup(){
+document.getElementById('popup').style.display='none';
+}
+</script>
+
+</body>
+</html>
